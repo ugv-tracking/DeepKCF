@@ -8,15 +8,19 @@ import cv2
 import vot
 import time
 
+
 CUDA_LIB='/usr/local/cuda-8.0/lib64/'
 from ctypes import *
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcublas.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcudart.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcudnn.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcufft.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcufftw.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcuinj64.so')
-lib1 = cdll.LoadLibrary(CUDA_LIB+'libcurand.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcublas.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcudart.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcudnn.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcufft.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcufftw.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcuinj64.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcurand.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcusolver.so')
+#lib1 = cdll.LoadLibrary(CUDA_LIB+'libcusparse.so')
+
 
 import tensorflow as tf
 
@@ -60,10 +64,10 @@ while True:
 
     # Processing the current image
     image = cv2.imread(imagefile, cv2.IMREAD_COLOR)
-    #region, lost, xtf = tracker.detect(image)
-    #if not lost:
-    #    tracker.train(image, False, xtf)
-
+    region, lost, xtf = tracker.detect(image)
+    if not lost:
+        tracker.train(image, False, xtf)
+    
     # *****************************************
     # VOT: Report the position of the object 
     #      every frame using report method.

@@ -3,10 +3,7 @@ import cv2
 import desiredResponse
 import kernel
 import numpy as np
-# import fhog
 import os
-# os.environ['GLOG_minloglevel'] = '3'
-# import caffe
 import tensorflow as tf
 from tensorflow.contrib.slim.nets import inception
 from PIL import Image
