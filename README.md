@@ -3,10 +3,16 @@
 This tracker is KCF based one with CNN features, and this version is made for both OTB and VOT evaluation.
 
 ## Deep KCF configure
-* Most Inportant, Do use the tensorflow version 1.1 and Cudnn version 5.1, 
-because the higher version will have conflicts in hdf5, which haven't been solved by now.
+*** Most Inportant, Do use the tensorflow version 1.1 and Cudnn version 5.1, because the higher version will have conflicts in hdf5, which haven't been solved by now.***
 * Download inception_v3.ckpt from Kaggle, and link to the current holder
 * test the deep kcf by running run_deepkcy.py 
+
+# Tensorflow configuration!!!
+    * update tensorflwo into r1.1 `sudo pip  install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.1.0-cp27-none-linux_x86_64.whl`
+    * use cudnn 5.1, download cudnn 5.1 `https://developer.nvidia.com/rdp/cudnn-download`, and install under the cudnn install direction `http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html`.
+
+
+
 
 
 ## Eval on OTB
