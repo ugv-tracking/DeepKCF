@@ -7,5 +7,5 @@ pydata = py.dict(pyargs('path','Benchmark/Matrix/img/','nz',4, 'ext', 'jpg', ...
 res_path='tmp';
 bSaveImage=0;
 
-%py_out=py.test_deepkcy.DeepKCF(pydata, res_path, bSaveImage);
-py.test_python.test();
+py_out=py.test_deepkcy.DeepKCF(pydata, res_path, bSaveImage);
+%py.test_python.test();

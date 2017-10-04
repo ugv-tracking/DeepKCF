@@ -297,6 +297,7 @@ class Tracker:
     def create_tf_graph(self, img):
         self.graph = tf.Graph()
         with self.graph.as_default():
+            print("ok")
             self.image = tf.placeholder(tf.float32, shape=img.shape)
             processed_image = preprocess_image(self.image, image_size, image_size)
             processed_images = tf.expand_dims(processed_image, 0)
