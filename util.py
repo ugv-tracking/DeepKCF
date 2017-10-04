@@ -127,7 +127,8 @@ def load_video_gt(seq):
     target_sz = np.array(seq['init_rect'][2:])
     #target_sz = target_sz[::-1]
 
-    video_path = '../../'+seq['path']
+    #video_path = '../../'+seq['path']
+    video_path = '/home/maxtom/codespace/Tracking/Benchmark/Matrix/img/'
     img_files = [f for f in os.listdir(video_path) if os.path.isfile(os.path.join(video_path, f))]
     img_files.sort()
 

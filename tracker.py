@@ -306,7 +306,7 @@ class Tracker:
 
             #self.init_fn = slim.assign_from_checkpoint_fn(os.path.abspath('checkpoint/inception_v3.ckpt'),
             #                                         slim.get_model_variables('InceptionV3'))
-            self.init_fn = slim.assign_from_checkpoint_fn('/raid/hustxly/KCF_CNN/inception_v3.ckpt', slim.get_model_variables('InceptionV3'))
+            self.init_fn = slim.assign_from_checkpoint_fn('inception_v3.ckpt', slim.get_model_variables('InceptionV3'))
 
 
         gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)

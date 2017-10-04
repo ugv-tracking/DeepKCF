@@ -52,12 +52,11 @@ def DeepKCF(seq, res_path, bSaveImage):
     
     return results, fps
 
-'''
+
 if __name__ == "__main__":
 
-    seq = {"path":"Benchmark/Shaking/img/","startFrame":1,"endFrame":365,"annoBegin":1,"init_rect":[255,135,61,71], "name":"shaking_1"}
+    seq = {"path":"Benchmark/Matrix/img/","startFrame":1,"endFrame":100,"annoBegin":1,"init_rect":[255,135,61,71], "name":"matrix"}
     res_path='tmp'
     bSaveImage=0
 
     DeepKCF(seq, res_path, bSaveImage)
-'''
