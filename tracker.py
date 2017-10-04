@@ -226,6 +226,7 @@ class Tracker:
         else:
             xlf = xlf_from_detection
 
+        #xlf = None
         # Compute the features kernel
         # if self.parameters.kernel.kernel_type == 'Gaussian':
         #     kf = kernel.gaussian_correlation(xlf, xlf, self.parameters.kernel.kernel_sigma, self.parameters.features)

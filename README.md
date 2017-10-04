@@ -4,7 +4,7 @@ This tracker is KCF based one with CNN features, and this version is made for bo
 
 ## Deep KCF configure
 * Download inception_v3.ckpt from Kaggle, and link to the current holder
-* test the deep kcf by running run_deepkcy.py
+* test the deep kcf by running run_deepkcy.py 
 
 ## Eval on OTB
 
